@@ -9,7 +9,7 @@ setup(
     license='MIT',
     description='Generate Password',
     long_description=open('README.md').read(),
-    scripts=['bin/gen_pass'],
+    scripts=['bin/genpass'],
     url='https://github.com/czchen/genpass',
     install_requires=[
         'pbkdf2==1.3',
