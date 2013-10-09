@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
 import getpass
+import gen_pass
 
-import pbkdf2
-
-ITERATIONS = 0x10000
 
 TABLE = [
     {
@@ -32,11 +30,9 @@ def get_nonce():
 def main():
     nonce = get_nonce()
     password = getpass.getpass('Enter password:')
-    result = pbkdf2.crypt('{}{}'.format(password, nonce),
-                          salt='',
-                          iterations=ITERATIONS)
-    result = result.split('$')[4]
+    result = gen_pass.gen_pass(nonce, password)
     print('{}'.format(result))
+
 
 if __name__ == '__main__':
     main()
