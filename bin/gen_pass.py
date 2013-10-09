@@ -20,12 +20,14 @@ TABLE = [
     },
 ]
 
+
 def get_nonce():
     for i in range(len(TABLE)):
         print('({}) {}'.format(i, TABLE[i]['name']))
     selection = getpass.getpass('Selection:')
     selection = int(selection)
     return TABLE[selection]['nonce']
+
 
 def main():
     nonce = get_nonce()
