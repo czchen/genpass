@@ -11,6 +11,6 @@ setup(
     scripts=['bin/gen_pass.py'],
     url='https://github.com/czchen/gen_pass',
     install_requires=[
-        pbkdf2==1.3,
+        'pbkdf2==1.3',
     ],
 )
