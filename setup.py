@@ -12,6 +12,6 @@ setup(
     scripts=['bin/genpass'],
     url='https://github.com/czchen/genpass',
     install_requires=[
-        'pbkdf2==1.3',
+        'pbkdf2',
     ],
 )
