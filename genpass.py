@@ -2,16 +2,13 @@
 import pbkdf2
 
 
-_ITERATIONS = 0x10000
-
-
-def gen_pass(nonce, password):
+def gen_pass(password, *, nonce='', salt='', iterations=0x10000):
     '''
-    >>> gen_pass('', '')
+    >>> gen_pass('')
     '9G39QAZXnhIqc7y.3gF5fMbbG752/tve'
     '''
     result = pbkdf2.crypt('{}{}'.format(password, nonce),
-                          salt='', iterations=_ITERATIONS)
+                          salt=salt, iterations=iterations)
     return result.split('$')[4]
 
 if __name__ == '__main__':

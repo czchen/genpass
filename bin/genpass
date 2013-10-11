@@ -19,18 +19,22 @@ TABLE = [
 ]
 
 
-def get_nonce():
+def get_item():
     for i in range(len(TABLE)):
         print('({}) {}'.format(i, TABLE[i]['name']))
     selection = getpass.getpass('Selection:')
     selection = int(selection)
-    return TABLE[selection]['nonce']
+    return TABLE[selection]
 
 
 def main():
-    nonce = get_nonce()
+    item = get_item()
     password = getpass.getpass('Enter password:')
-    result = genpass.gen_pass(nonce, password)
+    param = {}
+    for key in ('nonce', 'salt', 'iterations'):
+        if key in item:
+            param[key] = item[key]
+    result = genpass.gen_pass(password, *param)
     print('{}'.format(result))
 
 
