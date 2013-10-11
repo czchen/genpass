@@ -34,7 +34,7 @@ def main():
     for key in ('nonce', 'salt', 'iterations'):
         if key in item:
             param[key] = item[key]
-    result = genpass.gen_pass(password, *param)
+    result = genpass.gen_pass(password, **param)
     print('{}'.format(result))
 
 
