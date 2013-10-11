@@ -2,9 +2,9 @@
 import pbkdf2
 
 
-def gen_pass(password, *, nonce='', salt='', iterations=0x10000):
+def genpass(password, *, nonce='', salt='', iterations=0x10000):
     '''
-    >>> gen_pass('')
+    >>> genpass('')
     '9G39QAZXnhIqc7y.3gF5fMbbG752/tve'
     '''
     result = pbkdf2.crypt('{}{}'.format(password, nonce),
