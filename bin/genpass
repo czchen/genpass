@@ -4,30 +4,26 @@ import genpass
 import xerox
 
 
-TABLE = [
-    {
+TABLE = {
+    1: {
         'name': 'google',
         'nonce': '2013-10-09: nonce for google',
     },
-    {
+    2: {
         'name': 'dropbox',
         'nonce': '2013-10-09: nonce for dropbox',
     },
-    {
-        'name': 'keepass',
-        'nonce': '2013-10-09: nonce for keepass',
-    },
-    {
+    3: {
         'name': 'GnuPG',
         'nonce': '2013-10-11: nonce for GnuPG',
         'salt': 'GnuPGSalt',
         'iterations': 0x20000,
     },
-]
+}
 
 
 def get_item():
-    for i in range(len(TABLE)):
+    for i in sorted(TABLE.keys()):
         print('({}) {}'.format(i, TABLE[i]['name']))
     selection = getpass.getpass('Selection:')
     selection = int(selection)
