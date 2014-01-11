@@ -13,6 +13,6 @@ setup(
     url='https://github.com/czchen/genpass',
     install_requires=[
         'pbkdf2',
-        'xerox',
+        'pyperclip',
     ],
 )
