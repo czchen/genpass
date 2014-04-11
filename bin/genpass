@@ -13,7 +13,9 @@ TABLE = {
     },
     2: {
         'name': 'dropbox',
-        'nonce': '2013-10-09: nonce for dropbox',
+        'nonce': '2014-04011: nonce for dropbox',
+        'salt': 'HeartBleed',
+        'iterations': 0x20000,
     },
     3: {
         'name': 'GnuPG',
