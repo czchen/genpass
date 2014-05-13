@@ -17,12 +17,6 @@ TABLE = {
         'salt': 'HeartBleed',
         'iterations': 0x20000,
     },
-    3: {
-        'name': 'GnuPG',
-        'nonce': '2013-10-11: nonce for GnuPG',
-        'salt': 'GnuPGSalt',
-        'iterations': 0x20000,
-    },
 }
 
 
