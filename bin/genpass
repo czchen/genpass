@@ -17,6 +17,12 @@ TABLE = {
         'salt': 'HeartBleed',
         'iterations': 0x20000,
     },
+    3: {
+        'name': 'ProtonMail',
+        'nonce': '2015-01-27: nonce for protonmail',
+        'salt': 'salt',
+        'iterations': 0x20000,
+    },
 }
 
 
